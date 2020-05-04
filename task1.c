@@ -82,11 +82,11 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         if(rand()%2){
-            printf("[Canc] Task %d cancelled",id[i]);
+            printf("[Canc] Task %ld cancelled",id[i]);
             pthread_cancel(id[i]);
             continue;
         }
-        printf("[NotCanc] Task %d not cancelled",id[i]);
+        printf("[NotCanc] Task %ld not cancelled",id[i]);
         
     }
 
@@ -98,7 +98,6 @@ int main()
     }
     
 
-    /* code */
     return EXIT_SUCCESS;
 }
 
