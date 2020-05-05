@@ -42,13 +42,6 @@ void* methodCreate(void* arg){
     pthread_cleanup_push(methodDelete,str);
 
 
-    char number[12];
-    sprintf(number, "%d", dataArg->nr);
-    char* str = malloc(sizeof(BASE_NAME)+sizeof(number));
-    strcat(str,BASE_NAME);
-    strcat(str,number);
-    strcat(str,".txt");
-
     printf("[C] Creating File %s \n",str);
     fopen(str,"w+");
 
